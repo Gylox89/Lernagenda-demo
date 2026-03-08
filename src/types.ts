@@ -72,3 +72,26 @@ export interface Sanction {
   karmaThreshold: number;
   description: string;
 }
+
+export interface Competence {
+  id: number;
+  category: string;
+  name: string;
+  description: string;
+  levels: {
+    level: number;
+    description: string;
+    color: string;
+  }[];
+  selfAssessment: number; // 0-4, 0 = nicht bewertet
+  teacherAssessment?: number;
+  lastUpdated: string;
+}
+
+export interface CompetenceCategory {
+  id: number;
+  name: string;
+  icon: string;
+  color: string;
+  competences: Competence[];
+}
