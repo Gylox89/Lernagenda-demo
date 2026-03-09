@@ -95,3 +95,17 @@ export interface CompetenceCategory {
   color: string;
   competences: Competence[];
 }
+
+export interface CompetenceAssessment {
+  id: string;
+  category: string;
+  name: string;
+  color: string;
+  currentLevel: number;
+  previousLevel?: number;
+  history: {
+    date: string;
+    level: number;
+    assessedBy: 'self' | 'teacher';
+  }[];
+}
