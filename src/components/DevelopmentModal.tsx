@@ -211,25 +211,6 @@ const DevelopmentModal: React.FC<DevelopmentModalProps> = ({
             </tbody>
           </table>
         </div>
-
-        {/* Entwicklungsempfehlungen */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <h4 className="font-medium text-blue-800 mb-2">Entwicklungsempfehlungen</h4>
-          <ul className="space-y-2 text-sm text-blue-700">
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span>Fokussiere auf Kompetenzen mit Stufe 1 oder 2 für größte Verbesserung</span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span>Stabile Kompetenzen können durch Übung weiter entwickelt werden</span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2">•</span>
-              <span>Besprich deine Entwicklung regelmäßig mit deinem Lehrer</span>
-            </li>
-          </ul>
-        </div>
       </div>
     );
   };

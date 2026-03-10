@@ -177,7 +177,6 @@ const CompetenceModal: React.FC<CompetenceModalProps> = ({ isOpen, onClose }) =>
                   <th className="p-3 text-center border border-gray-300">Stufe 3</th>
                   <th className="p-3 text-center border border-gray-300">Stufe 4</th>
                   <th className="p-3 text-center border border-gray-300">Aktuelle Stufe</th>
-                  <th className="p-3 text-center border border-gray-300">Entwicklung</th>
                 </tr>
               </thead>
               <tbody>
@@ -220,34 +219,7 @@ const CompetenceModal: React.FC<CompetenceModalProps> = ({ isOpen, onClose }) =>
                         <div className={`px-3 py-1 rounded-full ${getLevelColor(comp.currentLevel)} font-medium`}>
                           Stufe {comp.currentLevel}
                         </div>
-                      </td>
-                      
-                      {/* Entwicklung */}
-                      <td className="p-3 border border-gray-300">
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1">
-                            <div className="flex justify-between text-xs text-gray-600 mb-1">
-                              <span>Vorher: {comp.previousLevel || '-'}</span>
-                              <span>Jetzt: {comp.currentLevel}</span>
-                            </div>
-                            <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                              <div 
-                                className={`h-full rounded-full ${
-                                  hasImproved ? 'bg-green-500' : 
-                                  hasDeclined ? 'bg-red-500' : 'bg-gray-400'
-                                }`}
-                                style={{ width: `${Math.abs(progress)}%` }}
-                              ></div>
-                            </div>
-                          </div>
-                          <button
-                            onClick={() => handleViewDevelopment(comp.id)}
-                            className="ml-3 px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
-                          >
-                            Details
-                          </button>
-                        </div>
-                      </td>
+                      </td>                      
                     </tr>
                   );
                 })}

@@ -109,3 +109,24 @@ export interface CompetenceAssessment {
     assessedBy: 'self' | 'teacher';
   }[];
 }
+
+export interface LearningPathItem {
+  id: number;
+  title: string;
+  description: string;
+  status: 'not-started' | 'in-progress' | 'completed';
+  estimatedHours: number;
+  prerequisites?: number[];
+  resources?: string[];
+}
+
+export interface LearningPath {
+  id: number;
+  subject: string;
+  color: string;
+  icon: string;
+  description: string;
+  totalItems: number;
+  completedItems: number;
+  items: LearningPathItem[];
+}

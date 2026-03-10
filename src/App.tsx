@@ -23,11 +23,11 @@ function App() {
 
   // Blog-Einträge
   const blogEntries: BlogEntry[] = [
-    { id: 1, type: 'karma', content: '+10 Punkte für Hausaufgaben erhalten', date: 'Heute, 10:30', isNew: true },
-    { id: 2, type: 'reflection', content: 'Neue Reflexionsfrage: Wie war dein Tag?', date: 'Heute, 09:15', isNew: true },
-    { id: 3, type: 'goal', content: 'Mathe-Test zu 80% abgeschlossen', date: 'Gestern, 16:45' },
+    { id: 1, type: 'karma', content: '+10 Punkte für Hilfe für Mitschüler erhalten', date: 'Heute, 10:30', isNew: true },
+    { id: 2, type: 'reflection', content: 'Mein Tag war heute wegen Mathe anstrengend', date: 'Heute, 09:15', isNew: true },
+    { id: 3, type: 'goal', content: 'Pünklich zum Unterricht erschienen', date: 'Gestern, 16:45' },
     { id: 4, type: 'grade', content: 'Neue Note in Englisch: 2,0', date: 'Gestern, 14:20' },
-    { id: 5, type: 'reminder', content: 'Reflexion für heute noch ausstehend', date: 'Gestern, 12:00' },
+    { id: 5, type: 'reminder', content: 'Praktikumsvertrag abgeben!', date: 'Gestern, 12:00' },
     { id: 6, type: 'achievement', content: 'Wöchentliches Lernziel erreicht!', date: '15.11.2023' },
     { id: 7, type: 'feedback', content: 'Lehrer-Feedback: Tolle Mitarbeit im Unterricht', date: '14.11.2023' },
     { id: 8, type: 'event', content: 'Nächster Elternsprechtag: 25. November', date: '13.11.2023' },

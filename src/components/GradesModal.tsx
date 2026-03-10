@@ -37,10 +37,7 @@ const GradesModal: React.FC<GradesModalProps> = ({ isOpen, onClose }) => {
               <p className="text-sm text-blue-700">Durchschnittsnote</p>
               <p className="text-2xl font-bold text-blue-800">2,14</p>
             </div>
-            <div className="text-right">
-              <p className="text-sm text-blue-700">Letzte Aktualisierung</p>
-              <p className="font-medium text-blue-800">Heute</p>
-            </div>
+        
           </div>
         </div>
 
@@ -56,13 +53,11 @@ const GradesModal: React.FC<GradesModalProps> = ({ isOpen, onClose }) => {
                 <div className="flex items-center justify-between">
                   <div>
                     <h5 className="font-medium text-gray-900">{subject.name}</h5>
-                    <p className="text-sm text-gray-500">Lehrer: {subject.teacher}</p>
                   </div>
                   <div className="text-right">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${getGradeColor(subject.grade)}`}>
                       {subject.grade}
                     </span>
-                    <p className="text-xs text-gray-500 mt-1">Aktualisiert: {subject.lastUpdate}</p>
                   </div>
                 </div>
               </button>
