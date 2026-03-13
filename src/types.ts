@@ -130,3 +130,15 @@ export interface LearningPath {
   completedItems: number;
   items: LearningPathItem[];
 }
+
+// Erweitere BlogEntry für Lehrer-View
+export interface BlogEntry2 {
+  id: number;
+  type: 'karma' | 'reflection' | 'goal' | 'grade' | 'reminder' | 'achievement' | 'feedback' | 'event' | 
+        'help' | 'question' | 'competence'; // Neue Typen für Lehrer
+  content: string;
+  date: string;
+  isNew?: boolean;
+  student?: string; // Nur für Lehrer-View
+  subject?: string; // Nur für Lehrer-View
+}
