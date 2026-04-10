@@ -1,0 +1,71 @@
+// data/learningPaths.ts
+import { type LearningPath } from './../../types';
+
+export const learningPathsData: LearningPath[] = [
+  {
+    id: 1,
+    subject: 'Mathematik',
+    color: 'bg-blue-100',
+    icon: '∫',
+    description: 'Unterrichtseinheit: Terme',
+    totalItems: 6,
+    completedItems: 0,
+    items: [
+      { id: 1, title: 'Einsetzen von Zahlen', description: 'Werte in Terme einsetzen und berechnen.', status: 'not-started', estimatedHours: 2, resources: ['Buch S. 45-48', 'Übungsblatt 1'] },
+      { id: 2, title: 'Aufstellen von Termen', description: 'Aus Textaufgaben eigene Terme entwickeln.', status: 'not-started', estimatedHours: 3, prerequisites: [1], resources: ['Buch S. 49-52', 'Arbeitsblatt 2'] },
+      { id: 3, title: 'Vereinfachen – Addition & Subtraktion', description: 'Gleichartige Glieder zusammenfassen.', status: 'not-started', estimatedHours: 3, prerequisites: [1, 2], resources: ['Buch S. 53-58', 'Übungsblatt 3'] },
+      { id: 4, title: 'Vereinfachen – Multiplikation & Division', description: 'Punktrechnung in Termen.', status: 'not-started', estimatedHours: 3, prerequisites: [3], resources: ['Buch S. 59-64', 'Arbeitsblatt 4'] },
+      { id: 5, title: 'Klammern ausmultiplizieren', description: 'Distributivgesetz anwenden.', status: 'not-started', estimatedHours: 4, prerequisites: [3, 4], resources: ['Buch S. 65-70', 'Übungsblatt 5'] },
+      { id: 6, title: 'Klammern auflösen', description: 'Minusklammern und verschachtelte Klammern.', status: 'not-started', estimatedHours: 4, prerequisites: [5], resources: ['Buch S. 71-76', 'Abschlussaufgaben'] },
+    ],
+  },
+  {
+    id: 2,
+    subject: 'Deutsch',
+    color: 'bg-red-100',
+    icon: '📚',
+    description: 'Kommunikation im Berufsleben',
+    totalItems: 6,
+    completedItems: 0,
+    items: [
+      { id: 7, title: 'Gesprächsregeln und Kommunikationsmodelle', description: 'Verbal/nonverbale Kommunikation, aktives Zuhören.', status: 'not-started', estimatedHours: 3, resources: [] },
+      { id: 8, title: 'Berufliche Gespräche führen', description: 'Telefonieren, Kundengespräch, Vorstellungsgespräch.', status: 'not-started', estimatedHours: 4, prerequisites: [7], resources: [] },
+      { id: 9, title: 'Präsentationstechniken anwenden', description: 'Präsentation planen, visualisieren und vortragen.', status: 'not-started', estimatedHours: 5, prerequisites: [7], resources: [] },
+      { id: 10, title: 'Berichte verfassen', description: 'Unfallbericht, Praktikumsbericht, Vorgangsbeschreibung.', status: 'not-started', estimatedHours: 4, resources: [] },
+      { id: 11, title: 'Geschäftsbrief und E‑Mail', description: 'Formelle Schreiben verfassen.', status: 'not-started', estimatedHours: 3, prerequisites: [10], resources: [] },
+      { id: 12, title: 'Stellungnahme und Erörterung', description: 'Argumente sammeln, gewichten, Stellung beziehen.', status: 'not-started', estimatedHours: 6, prerequisites: [11], resources: [] },
+    ],
+  },
+  {
+    id: 3,
+    subject: 'Englisch',
+    color: 'bg-green-100',
+    icon: '🇬🇧',
+    description: 'Job applications and workplace communication',
+    totalItems: 5,
+    completedItems: 0,
+    items: [
+      { id: 13, title: 'Writing a CV and cover letter', description: 'Structure of a CV, formal letter.', status: 'not-started', estimatedHours: 4, resources: [] },
+      { id: 14, title: 'Job interview – preparation and role play', description: 'Answer questions about skills.', status: 'not-started', estimatedHours: 4, prerequisites: [13], resources: [] },
+      { id: 15, title: 'Telephone English and messages', description: 'Make and take calls, leave a message.', status: 'not-started', estimatedHours: 3, resources: [] },
+      { id: 16, title: 'Business emails and memos', description: 'Formal and informal emails.', status: 'not-started', estimatedHours: 3, prerequisites: [13], resources: [] },
+      { id: 17, title: 'Presenting a company or product', description: 'Give a short presentation using visuals.', status: 'not-started', estimatedHours: 5, prerequisites: [14, 16], resources: [] },
+    ],
+  },
+  {
+    id: 4,
+    subject: 'BWL',
+    color: 'bg-yellow-100',
+    icon: '💼',
+    description: 'Geschäftsprozesse – Beschaffung, Produktion, Absatz',
+    totalItems: 5,
+    completedItems: 0,
+    items: [
+      { id: 18, title: 'Betriebliche Funktionen und Prozesse', description: 'Unternehmensbereiche und deren Zusammenwirken.', status: 'not-started', estimatedHours: 3, resources: [] },
+      { id: 19, title: 'Beschaffung – Angebote vergleichen', description: 'Angebotsvergleich, Skonto berechnen.', status: 'not-started', estimatedHours: 4, prerequisites: [18], resources: [] },
+      { id: 20, title: 'Produktion – Kostenrechnung', description: 'Einzelkosten, Gemeinkosten, Kalkulation.', status: 'not-started', estimatedHours: 5, prerequisites: [18, 19], resources: [] },
+      { id: 21, title: 'Absatz – Marketinginstrumente (4P)', description: 'Marketing‑Mix für ein Produkt entwickeln.', status: 'not-started', estimatedHours: 5, prerequisites: [18], resources: [] },
+      { id: 22, title: 'Projekt: Geschäftsprozess simulieren', description: 'Von der Bestellung bis zur Auslieferung.', status: 'not-started', estimatedHours: 6, prerequisites: [19, 20, 21], resources: [] },
+    ],
+  },
+];
