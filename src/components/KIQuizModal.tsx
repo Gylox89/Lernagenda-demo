@@ -174,7 +174,7 @@ const KIQuizModal: React.FC<KIQuizModalProps> = ({
             </h3>
             <button
               onClick={handleQuizComplete}
-              className="w-full py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
+              className="w-full py-2 bg-primary-600 text-black rounded-lg hover:bg-primary-700"
             >
               Weiter zur Selbsteinschätzung
             </button>

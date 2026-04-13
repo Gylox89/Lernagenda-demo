@@ -95,7 +95,7 @@ const ReflectionModal: React.FC<ReflectionModalProps> = ({ isOpen, onClose, onSa
                 disabled={!answer.trim()}
                 className={`px-4 py-2 rounded-lg font-medium ${
                   answer.trim()
-                    ? 'bg-purple-500 text-white hover:bg-purple-600'
+                    ? 'bg-purple-500 text-black hover:bg-purple-600'
                     : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                 }`}
               >

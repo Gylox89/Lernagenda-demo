@@ -207,7 +207,7 @@ const StructuredExplanationModal: React.FC<StructuredExplanationModalProps> = ({
                             : msg.type === 'prompt'
                             ? 'bg-blue-50 border-l-4 border-blue-400'
                             : 'bg-white border border-gray-200'
-                          : 'bg-primary-600 text-white'
+                          : 'bg-primary-600 text-black'
                       }`}
                     >
                       <div className={`text-xs mb-1 ${msg.role === 'assistant' ? 'text-gray-500' : 'text-primary-200'}`}>
@@ -243,7 +243,7 @@ const StructuredExplanationModal: React.FC<StructuredExplanationModalProps> = ({
           <div className="mb-3">
             <button
               onClick={handleSkipToAssessment}
-              className="w-full py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
+              className="w-full py-2 bg-green-600 text-black rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center space-x-2"
             >
               <span>✓</span>
               <span>Weiter zur Selbsteinschätzung</span>
@@ -289,7 +289,7 @@ const StructuredExplanationModal: React.FC<StructuredExplanationModalProps> = ({
                 <button
                   onClick={handleSendMessage}
                   disabled={waitingForResponse || !userInput.trim()}
-                  className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50"
+                  className="px-4 py-2 bg-primary-600 text-black rounded-lg hover:bg-primary-700 disabled:opacity-50"
                 >
                   Senden
                 </button>

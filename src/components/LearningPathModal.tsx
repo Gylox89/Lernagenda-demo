@@ -263,9 +263,9 @@ const LearningPathModal: React.FC<LearningPathModalProps> = ({ isOpen, onClose }
                                         w-10 h-10 rounded-full flex items-center justify-center 
                                         transition-all duration-200 hover:scale-110
                                         ${item.status === 'completed'
-                                          ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md'
+                                          ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-black shadow-md'
                                           : item.status === 'in-progress'
-                                          ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
+                                          ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-black shadow-md'
                                           : 'bg-gray-300 text-gray-600 hover:bg-gray-400'
                                         }
                                       `}
@@ -298,7 +298,7 @@ const LearningPathModal: React.FC<LearningPathModalProps> = ({ isOpen, onClose }
                                 <div className="flex items-center space-x-2">
                                   <span className={`
                                     text-xs font-semibold px-3 py-1.5 rounded-full
-                                    ${item.status === 'in-progress' ? 'bg-amber-500 text-white shadow-sm' : ''}
+                                    ${item.status === 'in-progress' ? 'bg-amber-500 text-black shadow-sm' : ''}
                                   `}>
                                     {item.status === 'in-progress' ? 'IN BEARBEITUNG' : ''}
                                   </span>
@@ -389,7 +389,7 @@ const LearningPathModal: React.FC<LearningPathModalProps> = ({ isOpen, onClose }
               </button>
               <button
                 onClick={saveAssessment}
-                className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
+                className="px-4 py-2 bg-primary-600 text-black rounded-lg hover:bg-primary-700"
               >
                 {assessmentItem.targetStatus === 'in-progress' ? 'Als „in Bearbeitung“ speichern' : 'Als „erledigt“ speichern'}
               </button>
