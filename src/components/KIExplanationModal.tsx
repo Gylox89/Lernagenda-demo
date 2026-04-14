@@ -96,7 +96,7 @@ const KIExplanationModal: React.FC<KIExplanationModalProps> = ({
         }
       }
     } catch (error) {
-      if (error.name !== 'AbortError') {
+      if (error instanceof Error && error.name !== 'AbortError') {
         console.error('Fehler:', error);
         setChatHistory([{
           role: 'assistant',
@@ -163,7 +163,7 @@ const KIExplanationModal: React.FC<KIExplanationModalProps> = ({
         }
       }
     } catch (error) {
-      if (error.name !== 'AbortError') {
+      if (error instanceof Error && error.name !== 'AbortError') {
         console.error('Fehler:', error);
         setChatHistory(prev => [...prev, {
           role: 'assistant',

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Header from './Header';
 import BlogSection from './components/BlogSection';
 import FunctionGrid from './components/FunctionGrid';
@@ -239,7 +238,7 @@ function TeacherApp() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-6 max-w-7xl">
-        <Header userName={userName} isTeacher={true} />
+        <Header userName={userName}  />
         
         {/* Zwei-Spalten-Layout für Desktop/Tablet */}
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">

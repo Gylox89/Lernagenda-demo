@@ -133,23 +133,14 @@ const CompetenceModal: React.FC<CompetenceModalProps> = ({ isOpen, onClose }) =>
     { level: 4, label: 'Experte', color: 'bg-blue-100 text-blue-800', icon: '🏆' },
   ];
 
-  const handleViewDevelopment = (competenceId: string) => {
-    setSelectedCompetence(competenceId);
-    setShowDevelopmentModal(true);
-  };
+  
 
   const getLevelColor = (level: number) => {
     return levels.find(l => l.level === level)?.color || 'bg-gray-100 text-gray-800';
   };
 
-  const getLevelIcon = (level: number) => {
-    return levels.find(l => l.level === level)?.icon || '○';
-  };
+  
 
-  const getProgress = (comp: CompetenceAssessment) => {
-    if (!comp.previousLevel) return 0;
-    return ((comp.currentLevel - comp.previousLevel) / 3) * 100;
-  };
 
   return (
     <>
@@ -180,11 +171,7 @@ const CompetenceModal: React.FC<CompetenceModalProps> = ({ isOpen, onClose }) =>
                 </tr>
               </thead>
               <tbody>
-                {competences.map((comp) => {
-                  const progress = getProgress(comp);
-                  const hasImproved = progress > 0;
-                  const hasDeclined = progress < 0;
-                  
+                {competences.map((comp) => {                 
                   return (
                     <tr key={comp.id} className="hover:bg-gray-50">
                       <td className="p-3 border border-gray-300">
@@ -254,7 +241,7 @@ const CompetenceModal: React.FC<CompetenceModalProps> = ({ isOpen, onClose }) =>
       <DevelopmentModal
         isOpen={showDevelopmentModal}
         onClose={() => setShowDevelopmentModal(false)}
-        competence={selectedCompetence ? competences.find(c => c.id === selectedCompetence) : null}
+        competence={selectedCompetence ? (competences.find(c => c.id === selectedCompetence) || null) : null}
         allCompetences={selectedCompetence ? null : competences}
       />
     </>

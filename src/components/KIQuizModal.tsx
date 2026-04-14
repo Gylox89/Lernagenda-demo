@@ -24,7 +24,7 @@ const KIQuizModal: React.FC<KIQuizModalProps> = ({
 }) => {
   const [mode, setMode] = useState<Mode>(null);
   const [showExplanationModal, setShowExplanationModal] = useState(false);
-  const [quizActive, setQuizActive] = useState(false);
+  const [_quizActive, setQuizActive] = useState<boolean>(false);
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
@@ -90,12 +90,6 @@ const KIQuizModal: React.FC<KIQuizModalProps> = ({
     reset();
   };
 
-  const handleExplanationComplete = () => {
-    // Bei Erklärung: fiktive Punktzahl (Bestanden/Nicht bestanden wird nicht bewertet)
-    onComplete(1, 1);
-    onClose();
-    reset();
-  };
 
   const reset = () => {
     setMode(null);

@@ -40,21 +40,20 @@ const LearningPathModal: React.FC<LearningPathModalProps> = ({ isOpen, onClose }
     setShowKIQuizModal(true);
   };
 
-  const handleQuizComplete = (score: number, total: number, answers: any[]) => {
-    console.log(`Quiz-Ergebnis für ${pendingQuizItem?.title}: ${score}/${total}`, answers);
-    // Optional: Quiz-Ergebnisse in State oder Backend speichern
-    
-    if (pendingQuizItem) {
-      openAssessment(
-        pendingQuizItem.pathId,
-        pendingQuizItem.itemId,
-        pendingQuizItem.title,
-        quizTargetStatus === 'initial' ? 'in-progress' : 'completed'
-      );
-      setPendingQuizItem(null);
-    }
-  };
-
+  const handleQuizComplete = (score: number, total: number) => {
+  console.log(`Quiz-Ergebnis: ${score}/${total}`);
+  // answers werden ignoriert, da nicht benötigt
+  
+  if (pendingQuizItem) {
+    openAssessment(
+      pendingQuizItem.pathId,
+      pendingQuizItem.itemId,
+      pendingQuizItem.title,
+      quizTargetStatus === 'initial' ? 'in-progress' : 'completed'
+    );
+    setPendingQuizItem(null);
+  }
+};
   const cancelQuiz = () => {
     setShowKIQuizModal(false);
     setPendingQuizItem(null);
@@ -183,7 +182,7 @@ const LearningPathModal: React.FC<LearningPathModalProps> = ({ isOpen, onClose }
   return (
     <>
       {/* Hauptmodal: Lernpfade */}
-      <Modal isOpen={isOpen} onClose={onClose} title="Lernwegelisten - AVdual Lehrplan" size="full">
+      <Modal isOpen={isOpen} onClose={onClose} title="Lernwegelisten - AVdual Lehrplan" size="xl">
         <div className="space-y-6">
           {/* Gesamtfortschritt */}
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-4">
@@ -328,7 +327,7 @@ const LearningPathModal: React.FC<LearningPathModalProps> = ({ isOpen, onClose }
           onComplete={handleQuizComplete}
           itemId={pendingQuizItem.itemId}
           itemTitle={pendingQuizItem.title}
-          targetStatus={quizTargetStatus}
+          phase={quizTargetStatus}
         />
       )}
 
